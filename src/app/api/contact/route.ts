@@ -6,7 +6,7 @@ export async function POST(request: Request) {
 
     const LEAD_API_URL = process.env.NEXT_PUBLIC_LEAD_API_URL;
 
-    // IMPORTANT: Target endpoint is supposed to be the TeamSetu HRMS SaaS.
+    // IMPORTANT: Target endpoint is supposed to be the TeemSetu HRMS SaaS.
     // If the endpoint is not configured, we simulate a success for now.
     if (!LEAD_API_URL) {
       console.warn("NEXT_PUBLIC_LEAD_API_URL is not set. Simulating successful form submission.");
@@ -21,7 +21,7 @@ export async function POST(request: Request) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        // Add authorization headers if required by TeamSetu API:
+        // Add authorization headers if required by TeemSetu API:
         // "Authorization": `Bearer ${process.env.LEAD_API_TOKEN}`
       },
       body: JSON.stringify({

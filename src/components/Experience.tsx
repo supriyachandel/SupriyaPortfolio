@@ -53,15 +53,15 @@ export default function Experience() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">How I Build</h2>
-          <p className="text-foreground/60 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-slate-900">How I Build</h2>
+          <p className="text-slate-600 max-w-2xl mx-auto text-base md:text-lg">
             A systematic approach to turning complex business requirements into reliable software.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative max-w-5xl mx-auto">
-          {/* Connecting Line (desktop only conceptually, drawn via borders) */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-white/5 -translate-y-1/2 z-0" />
+          {/* Connecting Line */}
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-slate-200 -translate-y-1/2 z-0" />
           
           {steps.map((step, index) => (
             <motion.div
@@ -70,14 +70,14 @@ export default function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative z-10 flex flex-col items-center text-center p-6 rounded-2xl glass-panel group hover:-translate-y-2 transition-all duration-300"
+              className="relative z-10 flex flex-col items-center text-center p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-indigo-300 group hover:-translate-y-2 transition-all duration-300"
             >
-              <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-foreground/80 group-hover:text-accent group-hover:border-accent/30 transition-colors">
+              <div className="w-16 h-16 rounded-2xl bg-indigo-50 border border-indigo-100 flex items-center justify-center mb-6 text-indigo-600 group-hover:scale-110 transition-transform">
                 {step.icon}
               </div>
               <div className="text-xs font-bold text-accent mb-2 tracking-widest uppercase">{step.num}</div>
-              <h3 className="text-lg font-semibold text-white mb-3">{step.title}</h3>
-              <p className="text-sm text-foreground/60 leading-relaxed">
+              <h3 className="text-lg font-bold text-slate-900 mb-3">{step.title}</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
                 {step.description}
               </p>
             </motion.div>

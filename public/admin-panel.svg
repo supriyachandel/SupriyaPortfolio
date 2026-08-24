@@ -1,0 +1,5 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1e293b"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#64748b" font-family="sans-serif" font-size="24">Admin Panel Screenshot Placeholder</text>
+  <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" fill="#475569" font-family="sans-serif" font-size="16">(Please place admin-panel.png in public folder)</text>
+</svg>

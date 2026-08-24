@@ -57,8 +57,8 @@ export default function Services() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">What I Can Build</h2>
-          <p className="text-foreground/60 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-slate-900">What I Can Build</h2>
+          <p className="text-slate-600 max-w-2xl mx-auto text-base md:text-lg">
             Comprehensive backend solutions tailored to your business needs, from architecture to production deployment.
           </p>
         </motion.div>
@@ -71,13 +71,13 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="p-6 rounded-2xl glass hover:glass-panel transition-all duration-300 group hover:-translate-y-1"
+              className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-indigo-200 transition-all duration-300 group hover:-translate-y-1"
             >
-              <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 group-hover:glow transition-all">
+              <div className="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 {service.icon}
               </div>
-              <h3 className="text-lg font-semibold mb-3 text-white">{service.title}</h3>
-              <p className="text-sm text-foreground/60 leading-relaxed">
+              <h3 className="text-lg font-bold mb-3 text-slate-900">{service.title}</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
                 {service.description}
               </p>
             </motion.div>

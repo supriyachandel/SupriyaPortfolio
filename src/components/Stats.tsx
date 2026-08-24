@@ -12,7 +12,7 @@ export default function Stats() {
   ];
 
   return (
-    <section className="py-16 border-y border-white/5 bg-background/50">
+    <section className="py-16 border-y border-slate-200/80 bg-slate-100/50">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
           {stats.map((stat, index) => (
@@ -22,12 +22,12 @@ export default function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex flex-col gap-2"
+              className="flex flex-col gap-2 items-center"
             >
-              <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-400">
+              <div className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 whitespace-nowrap">
                 {stat.value}
               </div>
-              <div className="text-sm font-medium text-foreground/60 uppercase tracking-wider">
+              <div className="text-xs lg:text-sm font-semibold text-slate-500 uppercase tracking-wider">
                 {stat.label}
               </div>
             </motion.div>
