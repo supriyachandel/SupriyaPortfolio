@@ -39,7 +39,7 @@ export default function About() {
             
             <div className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed font-normal">
               <p>
-                I&apos;m a Backend Developer with 5+ years of experience designing, developing, and maintaining scalable web applications. My work focuses on building robust backend architectures, REST APIs, database systems, integrations, automation, and production-ready applications.
+                I&apos;m a Backend Developer with 6+ years of experience designing, developing, and maintaining scalable web applications. My work focuses on building robust backend architectures, REST APIs, database systems, integrations, automation, and production-ready applications.
               </p>
               <p>
                 I enjoy solving complex technical problems, refactoring existing systems, improving performance, and turning business requirements into reliable software.

@@ -14,7 +14,7 @@ const fontSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: "Supriya | Backend Developer | Laravel, PHP & SaaS Development",
-  description: "Backend Developer with 5+ years of experience specializing in Laravel, PHP, Node.js, REST APIs, SaaS platforms, integrations, database architecture and production deployment.",
+  description: "Backend Developer with 6+ years of experience specializing in Laravel, PHP, Node.js, REST APIs, SaaS platforms, integrations, database architecture and production deployment.",
 };
 
 export default function RootLayout({
