@@ -13,7 +13,7 @@ export default function TechStack() {
     {
       category: "Frontend",
       icon: <Code className="w-5 h-5 text-purple-600" />,
-      items: ["React.js", "Next.js", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "jQuery", "Bootstrap"]
+      items: ["HTML5", "CSS3", "Tailwind CSS", "JavaScript", "jQuery", "Bootstrap"]
     },
     {
       category: "Databases",
