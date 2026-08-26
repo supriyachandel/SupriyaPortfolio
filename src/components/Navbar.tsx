@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useContactModal } from "@/context/ContactModalContext";
 
 const navLinks = [
-  { name: "Home", href: "/" },
+  { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Services", href: "#services" },
   { name: "Projects", href: "#projects" },
@@ -16,6 +17,7 @@ const navLinks = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { openContactModal } = useContactModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +29,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
           ? "bg-white/80 backdrop-blur-md border-b border-slate-200/80 py-3 shadow-xs"
           : "bg-transparent py-5"
@@ -37,9 +39,12 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-xl font-bold tracking-tight text-slate-900 hover:text-indigo-600 transition-colors"
+          className="flex items-center gap-2.5 text-xl font-bold tracking-tight text-slate-900 group"
         >
-          Supriya<span className="text-accent">.</span>
+          <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-600 to-indigo-600 flex items-center justify-center text-white text-xs font-black shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+            S
+          </div>
+          <span>Supriya<span className="text-indigo-600">.</span></span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -57,15 +62,16 @@ export default function Navbar() {
 
         {/* CTA & Mobile Toggle */}
         <div className="flex items-center gap-4">
-          <Link
-            href="#contact"
-            className="hidden md:inline-flex items-center justify-center rounded-full bg-accent hover:bg-accent-hover text-white px-5 py-2 text-sm font-medium transition-colors shadow-md shadow-accent/20"
+          <button
+            type="button"
+            onClick={openContactModal}
+            className="hidden md:inline-flex items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-6 py-2.5 text-sm font-bold transition-all shadow-md shadow-indigo-500/20 hover:shadow-indigo-500/30 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
           >
             Let&apos;s Talk &rarr;
-          </Link>
+          </button>
           
           <button
-            className="md:hidden text-slate-800 hover:text-indigo-600"
+            className="md:hidden text-slate-800 hover:text-indigo-600 cursor-pointer"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -94,13 +100,16 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <Link
-                href="#contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="mt-2 inline-flex items-center justify-center rounded-lg bg-accent text-white px-5 py-3 text-sm font-medium w-full shadow-md shadow-accent/20"
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  openContactModal();
+                }}
+                className="mt-2 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-5 py-3 text-sm font-bold w-full shadow-md shadow-indigo-500/20 cursor-pointer"
               >
                 Let&apos;s Talk &rarr;
-              </Link>
+              </button>
             </nav>
           </motion.div>
         )}

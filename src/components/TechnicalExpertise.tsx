@@ -6,39 +6,36 @@ export default function TechnicalExpertise() {
   const expertise = [
     "Scalable Architecture",
     "API-First Development",
-    "Database Design",
-    "Secure Authentication",
+    "Database Modeling",
+    "Secure JWT & OAuth",
     "Performance Optimization",
     "Third-Party Integrations",
-    "AI Integration",
-    "Production Deployment",
+    "AI & LLM Integration",
+    "Production Cloud Deployment",
     "Code Refactoring",
-    "Debugging & Maintenance"
+    "Query Optimization & Indexing",
+    "Multi-Tenant SaaS",
+    "Automated Workflows"
   ];
 
   return (
-    <section className="py-32 relative overflow-hidden bg-slate-50 border-y border-slate-200/80">
-      {/* Dynamic Grid Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(79,70,229,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(79,70,229,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
-      
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8 max-w-6xl mx-auto text-center">
+    <section className="py-24 relative overflow-hidden bg-slate-50/70 border-y border-slate-200/80">
+      <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-7xl">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-5xl mx-auto text-center">
           {expertise.map((item, index) => (
             <motion.div
               key={item}
-              initial={{ opacity: 0, scale: 0.8 }}
+              initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ 
-                duration: 0.6, 
-                delay: index * 0.05,
-                type: "spring",
-                stiffness: 100
+                duration: 0.4, 
+                delay: index * 0.03
               }}
-              className="text-2xl md:text-3xl lg:text-5xl font-extrabold tracking-tight text-slate-300 hover:text-indigo-600 transition-colors duration-300 cursor-default"
+              whileHover={{ scale: 1.05, y: -2 }}
+              className="px-6 py-3.5 rounded-2xl bg-white border border-slate-200/80 text-slate-700 hover:text-indigo-600 hover:border-indigo-300 hover:shadow-md text-sm sm:text-base font-bold transition-all duration-200 cursor-default"
             >
               {item}
-              {index < expertise.length - 1 && <span className="hidden lg:inline text-slate-300 ml-8">•</span>}
             </motion.div>
           ))}
         </div>

@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ContactModal from "@/components/ContactModal";
+import { ContactModalProvider } from "@/context/ContactModalContext";
 
-const inter = Inter({
-  variable: "--font-inter",
+const fontSans = Plus_Jakarta_Sans({
+  variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -20,13 +23,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} scroll-smooth antialiased`}>
+    <html lang="en" className={`${fontSans.variable} scroll-smooth scroll-pt-24 antialiased font-sans`}>
       <body className="min-h-screen bg-background text-foreground flex flex-col font-sans">
-        <Navbar />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
+        <ContactModalProvider>
+          <Navbar />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+          <ContactModal />
+        </ContactModalProvider>
       </body>
     </html>
   );

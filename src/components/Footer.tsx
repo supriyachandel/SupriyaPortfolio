@@ -33,7 +33,7 @@ export default function Footer() {
             <h4 className="text-slate-900 font-bold mb-6">Navigation</h4>
             <ul className="space-y-4">
               <li>
-                <Link href="/" className="text-slate-600 hover:text-indigo-600 transition-colors font-medium">Home</Link>
+                <Link href="#home" className="text-slate-600 hover:text-indigo-600 transition-colors font-medium">Home</Link>
               </li>
               <li>
                 <Link href="#about" className="text-slate-600 hover:text-indigo-600 transition-colors font-medium">About</Link>
@@ -53,10 +53,18 @@ export default function Footer() {
           <div>
             <h4 className="text-slate-900 font-bold mb-6">Services</h4>
             <ul className="space-y-4">
-              <li className="text-slate-600 font-medium">Backend Development</li>
-              <li className="text-slate-600 font-medium">SaaS Development</li>
-              <li className="text-slate-600 font-medium">API Integration</li>
-              <li className="text-slate-600 font-medium">Database Architecture</li>
+              <li>
+                <Link href="#services" className="text-slate-600 hover:text-indigo-600 transition-colors font-medium">Backend Development</Link>
+              </li>
+              <li>
+                <Link href="#services" className="text-slate-600 hover:text-indigo-600 transition-colors font-medium">SaaS Development</Link>
+              </li>
+              <li>
+                <Link href="#services" className="text-slate-600 hover:text-indigo-600 transition-colors font-medium">API Integration</Link>
+              </li>
+              <li>
+                <Link href="#services" className="text-slate-600 hover:text-indigo-600 transition-colors font-medium">Database Architecture</Link>
+              </li>
             </ul>
           </div>
         </div>
