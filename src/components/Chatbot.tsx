@@ -35,6 +35,20 @@ export default function Chatbot() {
     }
   }, [messages, isOpen, isLoading]);
 
+  // Close chatbot on scroll
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleScroll = () => {
+      setIsOpen(false);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isOpen]);
+
   const handleSend = async () => {
     if (!inputValue.trim() || isLoading) return;
 
@@ -157,7 +171,7 @@ export default function Chatbot() {
       {/* Floating Action Button (Toggle Button) */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 rounded-full bg-gradient-to-tr from-purple-600 via-indigo-600 to-indigo-700 text-white flex items-center justify-center shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/40 hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer z-50 relative group"
+        className="w-14 h-14 rounded-full bg-gradient-to-tr from-purple-600 via-indigo-600 to-indigo-700 text-white flex items-center justify-center shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/40 hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer select-none z-50 relative group"
         aria-label="Toggle chatbot window"
       >
         <AnimatePresence mode="wait">
