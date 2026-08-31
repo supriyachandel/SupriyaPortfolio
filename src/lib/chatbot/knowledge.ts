@@ -332,7 +332,7 @@ export function getChatbotResponse(message: string, history: ChatMessage[]): str
   }
   // Profile / About Supriya
   if (containsWord(msg, ["who is", "about supriya", "about her", "profile", "introduce", "who are you", "about yourself", "about you", "tell me about supriya"])) {
-    return "Supriya is a professional Backend Developer with 5+ years of experience (listed as 6+ years on the portfolio) designing, developing, and maintaining scalable web applications. Her core focus includes building robust backend architectures, REST APIs, database schema design, third-party integrations, and end-to-end SaaS products.";
+    return "Supriya is a professional Backend Developer with 6+ years of experience designing, developing, and maintaining scalable web applications. Her core focus includes building robust backend architectures, REST APIs, database schema design, third-party integrations, and end-to-end SaaS products.";
   }
   // Budget & Pricing Queries
   if (containsWord(msg, ["budget", "pricing", "cost", "charge", "rate", "fee"])) {
@@ -384,7 +384,7 @@ export function getChatbotResponse(message: string, history: ChatMessage[]): str
 
   // 10. Experience & Years of Experience
   if (containsWord(msg, ["experience", "years", "how long", "career", "background"])) {
-    return "Supriya has 5+ years of professional experience (listed as 6+ years on the portfolio) as a Backend Developer. She has built 30+ custom admin panels, engineered backends for 20+ mobile apps, and developed 1 flagship cloud HRMS SaaS platform, managing projects end-to-end.";
+    return "Supriya has 6+ years of professional experience as a Backend Developer. She has built 30+ custom admin panels, engineered backends for 20+ mobile apps, and developed 1 flagship cloud HRMS SaaS platform, managing projects end-to-end.";
   }
 
   // 11. Development Process Queries
