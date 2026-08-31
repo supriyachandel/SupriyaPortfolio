@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactModal from "@/components/ContactModal";
+import Chatbot from "@/components/Chatbot";
 import { ContactModalProvider } from "@/context/ContactModalContext";
 
 const fontSans = Plus_Jakarta_Sans({
@@ -32,6 +33,7 @@ export default function RootLayout({
           </main>
           <Footer />
           <ContactModal />
+          <Chatbot />
         </ContactModalProvider>
       </body>
     </html>
