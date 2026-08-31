@@ -35,20 +35,6 @@ export default function Chatbot() {
     }
   }, [messages, isOpen, isLoading]);
 
-  // Close chatbot on scroll
-  useEffect(() => {
-    if (!isOpen) return;
-
-    const handleScroll = () => {
-      setIsOpen(false);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isOpen]);
-
   const handleSend = async () => {
     if (!inputValue.trim() || isLoading) return;
 
